@@ -8,7 +8,7 @@ class MenuManager:
         except Exception as e:
             print(f"Error retrieving menu item: {e}")
             return None
-
+    
     def all_items(self, conn):
         query = "SELECT * FROM Menu_Items"
         try:

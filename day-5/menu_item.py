@@ -1,6 +1,5 @@
 import psycopg2
 
-
 class MenuItem:
     def __init__(self, item_name: str, item_price: float):
         self.item_name = item_name
@@ -47,7 +46,7 @@ class MenuItem:
 
         if not updates:
             return
-
+        
         original_name = old_name if new_name else self.item_name
         query = f"UPDATE Menu_Items SET {', '.join(updates)} WHERE item_name = %s"
         values.append(original_name)
